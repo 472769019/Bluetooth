@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context="com.cccg.example.bluetooth.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/paired_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="已配对的设备"
+            android:textColor="#000"/>
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="64dp"
+            android:layout_height="37dp"
+            android:layout_marginRight="5dp"
+            android:text="刷新"
+            android:background="#0000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <ListView
+            android:id="@+id/paired_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#eee"/>
+
+        <Button
+            android:id="@+id/btn_send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="发送数据"
+            android:layout_margin="5dp"
+            android:background="#0000"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/new_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="搜索到的设备"
+        android:textColor="#000"/>
+
+    <ListView
+        android:id="@+id/new_devices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="1px"
+        android:background="#fff"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改本机蓝牙名称"
+        android:textColor="#000"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/et_set_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="蓝牙名称"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_set_name"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:background="#0000"
+            android:text="修改"/>
+
+    </LinearLayout>
+
+</LinearLayout>
